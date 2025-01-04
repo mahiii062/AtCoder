@@ -1,0 +1,32 @@
+Problem Link: https://atcoder.jp/contests/abc387/tasks/abc387_b
+Solution is here:')
+
+/**
+ * MAHI A RASHED MASHFIK
+ *   4th January 2025
+ *     AtCoder ABC
+ */
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    int x;
+    cin >> x;
+    int c = 0;
+    for (int i = 1; i <= 9; i++)
+    {
+        for (int j = 1; j <= 9; j++)
+            c = c + (i * j);
+    }
+    int cnt = 0;
+    for (int i = 1; i <= 9; i++)
+    {
+        if (x % i == 0 && x / i <= 9)
+            cnt++;
+    }
+    int sx = cnt * x;
+    cout << c - sx << endl;
+}
