@@ -1,0 +1,16 @@
+Problem Link: https://atcoder.jp/contests/abc387/tasks/abc387_a
+Solution is here:')
+
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+
+    ll squareYear = (a + b) * (a + b);
+    cout << squareYear << endl;
+}
