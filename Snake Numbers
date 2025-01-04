@@ -1,0 +1,40 @@
+Problem Link: https://atcoder.jp/contests/abc387/tasks/abc387_c
+Solution is here:')
+
+
+/**
+ * MAHI A RASHED MASHFIK
+ *   4th January 2025
+ *     AtCoder ABC
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+bool newYearFun(ll n)
+{
+    string str = to_string(n);
+    char top = str[0];
+    for (int i = 1; i < str.size(); i++)
+    {
+        if (str[i] >= top)
+            return false;
+    }
+    return true;
+}
+
+int main()
+{
+    ll l, r;
+    cin >> l >> r;
+    int cnt = 0;
+
+    for (ll i = l; i <= r; i++)
+    {
+        if (newYearFun(i))
+            cnt++;
+    }
+    cout << cnt << endl;
+}
